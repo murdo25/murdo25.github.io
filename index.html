@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Ben Murdoch Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
+    }
+
+    .wrapper {
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        z-index: 10;
+    }
+
+    .pos {
+        z-index: 11;
+    }
+
+    .jumbotron {
+        /*background-color: #f4511e;*/
+        background-color: #4c93ce;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #303030;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .container-fluid {
+        padding: 60px 50px;
+    }
+
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+
+    .logo-small {
+        color: #f4511e;
+        font-size: 50px;
+    }
+
+    .logo {
+        color: #f4511e;
+        font-size: 200px;
+    }
+
+    .h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    .item span {
+        font-style: normal;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        background-color: #4c93ce;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+        color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+    }
+
+    footer .glyphicon {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f4511e;
+    }
+
+    .slideanim {
+        visibility: hidden;
+    }
+
+    .slide {
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        visibility: visible;
+    }
+
+    .margin-small{
+        margin-top: -30%;
+        margin: 5%;
+    }
+
+
+    @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    @-webkit-keyframes slide {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .col-sm-4 {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .btn-lg {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .logo {
+            font-size: 150px;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                <a img="robots/bot-icon-2883144_1280.png" class="navbar-brand"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container (Main Header) -->
+    <div class="jumbotron text-center">
+        <h1 class="intro-heading">Ben Murdoch</h1>
+        <p class="intro-lead-in">Research Scientist</p>
+    </div>
+
+
+    <!-- Container (Home Section) -->
+    <div id="home" class="container-fluid">
+        <div class="row">
+            <div>
+                <p class="centered">
+                    I research autonomous agents that learn emergent languages in order to facilitate human robot interaction. While it’s possible to download and analyze large corpora full of symbolic information like Wikipedia or a knowledge graph, those symbols exist
+                    only as abstract entities disconnected from elementary sensory perception. The bleeding together of symbolic reasoning and the physical world is where language emerges. This illustrates one of the biggest flaws of twenty first century
+                    chatbots. How can we expect a chatbot to chat about a world it’s never seen? I propose we solve this problem through emergent language. If we want robots to understand language, they will need to evolve it. I use reinforcement learning
+                    as a method to establish learnt communication protocols across multi agent teams and by doing so create the next generation of social robots.
+
+
+                </p>
+                <div class="text-center">
+                    <button class="btn btn-default btn-lg wrapper"><a href="#contact">Get in Touch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container (Experience Section) -->
+    <div id="experience" class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="cortana.svg" alt="Cortana" class="logo img slideanim">
+            </div>
+            <div class="col-sm-8">
+                <h2>My Experience</h2><br>
+                <div>
+                    <h4><strong>Intern - Microsoft AI & Research: </strong> Summer 2018</h4>
+                    <p class="margin-small">
+
+                        Built scalable deep learning architectures for domain specific named entity recognition in Cortana.<br> Designed and implemented a novel CNN architecture for fully parallelizable sentence parsing.<br> Improved slot tagging speed
+                        by 80%<br>
+
+                    </p>
+                </div>
+                <div>
+                    <h4><strong>Research Scientist - Perception Control and Cognition Lab: </strong> 2016-Present</h4>
+                    <p class="margin-small">
+
+                        Published 3 academic papers on NLP and reinforcement learning at international research conferences.<br> Won first place at the Artificial Text Adventurer Competition at CIG 2016 & 2017.<br> Competed in the Alexa Prize Challenge
+                        2018.
+                        <br>
+
+                    </p>
+                </div>
+                <div>
+                    <h4><strong>Flight Director - Christa McAuliffe Space Education Center: </strong> 2008 - 2013</h4>
+                    <p class="margin-small">
+
+                        Managed a stealth shuttle craft simulator.<br> Taught students how to work together under extraneous mission circumstances.<br> Helped kids extend their education beyond the classroom.<br>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Container (Projects Section) -->
+    <div id="projects" class="container-fluid text-center pos">
+        <h2>Projects</h2>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <a href="https://pcc.cs.byu.edu/category/eve/">
+                    <h4>EVE</h4>
+                    <p>A Social Robot for the Amazon Alexa</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://techcrunch.com/2017/09/19/verbal-common-sense-will-prevent-ais-from-harvesting-kings-and-unlocking-oranges/">
+                    <h4>CARL</h4>
+                    <p>An Artificial text Adventurer</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://arxiv.org/abs/1703.03429">
+                    <h4>IJCAI 2017 Publication</h4>
+                    <p>Affordance Extraction Via Word Embeddings</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Main Header) -->
+    <div id="contact" class="jumbotron text-center">
+        <div>
+            <a href="javascript:;"></a>
+            <h2 onclick="Alert(event)" class="intro-heading">Contact Me</h2>
+            <p class="intro-lead-in">murdoch@byu.edu</p>
+        </div>
+
+    </div>
+          
+      <!-- Container (Links Section) -->
+    <div id="projects" class="container-fluid text-center pos">
+        <br>
+        <div class="row ">
+            <div class="col-sm-4">
+                <a href="https://www.linkedin.com/in/ben-murdoch/">
+                <img src="LinkedIn_logo_initials.png" alt="linkedin" width="100px" class="logo">
+             
+            </div>
+            <div class="col-sm-4">
+                <a href="javascript:;"></a>
+                        <h4></h4>
+                                            
+                    <p>Thanks for visiting!</p>
+            </div>
+            <div class="col-sm-4">
+                <a href="https://github.com/murdo25">
+            <img src="kisspng-computer-icons-github-github-logo-save-icon-format-5ab0fad15af349.5031683815215479853725.png" alt="github" width="100px" class="logo">
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+
+    <script type="text/javascript">
+        function Alert(event) {
+            alert("I'd love to chat! My email is: murdoch@byu.edu");
+
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function() {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            });
+
+            // Slide in elements on scroll
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+
+</body>
+
+</html>
