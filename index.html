@@ -435,7 +435,9 @@ a:hover, .link:hover {
   margin: 0 0 0.7rem;
 }
 
-/* Tiny external-link glyph — used inline inside an <a> to signal off-site */
+/* Tiny external-link glyph — used inline inside an <a> to signal off-site.
+   font-variant-emoji: text + the U+FE0E variation selector in the markup
+   keep iOS/Android from rendering the arrow as a color emoji. */
 .link-ext {
   font-size: 0.78em;
   color: var(--ember-soft);
@@ -443,6 +445,8 @@ a:hover, .link:hover {
   vertical-align: 0.08em;
   margin-left: 0.12em;
   font-style: normal;
+  font-variant-emoji: text;
+  font-family: var(--serif);
   transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1), color 200ms ease;
 }
 
@@ -1026,13 +1030,6 @@ a:focus-visible,
         </p>
         <ul class="socials" aria-label="Social links">
           <li>
-            <a href="mailto:ben.murdoch.94@gmail.com" aria-label="Email Ben">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.75-1.25c-.69 0-1.25.56-1.25 1.25v.4l7.5 4.687 7.5-4.687v-.4c0-.69-.56-1.25-1.25-1.25H5.75ZM19.5 7.92l-7.102 4.439a.75.75 0 0 1-.796 0L4.5 7.92v10.33c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V7.92Z"/>
-              </svg>
-            </a>
-          </li>
-          <li>
             <a href="https://github.com/murdo25" target="_blank" rel="noopener" aria-label="GitHub">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.97 3.22 9.18 7.69 10.67.56.1.77-.24.77-.54 0-.27-.01-1-.02-1.96-3.13.68-3.79-1.51-3.79-1.51-.51-1.31-1.25-1.66-1.25-1.66-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.55 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.97 0 0 .95-.3 3.1 1.15.9-.25 1.86-.38 2.82-.38.96 0 1.93.13 2.83.38 2.15-1.45 3.1-1.15 3.1-1.15.61 1.54.23 2.68.11 2.97.72.79 1.16 1.79 1.16 3.02 0 4.31-2.63 5.25-5.14 5.53.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.78.54 4.46-1.49 7.68-5.7 7.68-10.67C23.25 5.48 18.27.5 12 .5Z"/>
@@ -1110,7 +1107,7 @@ a:focus-visible,
                   <h4 class="subentry-role">Senior Research Engineer</h4>
                   <span class="subentry-dates">Mar 2025 &mdash; Present</span>
                 </div>
-                <p class="subentry-team"><a href="https://labs.google.com/cc/" target="_blank" rel="noopener">Project CC<span class="link-ext" aria-hidden="true">↗</span></a> &middot; Language Applications</p>
+                <p class="subentry-team"><a href="https://labs.google.com/cc/" target="_blank" rel="noopener">Project CC<span class="link-ext" aria-hidden="true">↗&#xFE0E;</span></a> &middot; Language Applications</p>
                 <ul class="entry-points">
                   <li>Founding member of <em>Project CC</em>, a proactive, helpful AI assistant. Built the initial user-modeling layer: preference extraction, to-do detection, and the day-to-day prioritization that drives the flagship <em>Your Day Ahead</em> feature.</li>
                   <li>Enabled Google Workspace function calling for the agent and made tool-calling reliable across the Google surface area.</li>
@@ -1238,7 +1235,7 @@ a:focus-visible,
           </div>
           <div class="entry-body">
             <h3 class="entry-role">Research Scientist</h3>
-            <p class="entry-org">BYU Perception, Control &amp; Cognition Lab</p>
+            <p class="entry-org">Perception, Control &amp; Cognition Lab</p>
             <ul class="entry-points">
               <li>Won the $250K Amazon Alexa Prize Challenge grant (1-in-9 spot) for our team's research on conversational AI; designed the NLG pipeline for our 2018 entry, <em>EVE</em>.</li>
               <li>Led safety work on Alexa Prize: developed early embedding-based filters for cleaning unsafe content (NSFW, hate speech) out of pre-training corpora. An early version of what's now standard practice.</li>
@@ -1255,7 +1252,7 @@ a:focus-visible,
           </div>
           <div class="entry-body">
             <h3 class="entry-role">Undergraduate Researcher &middot; Underwater Robotics</h3>
-            <p class="entry-org">BYU Office of Research and Creative Activities</p>
+            <p class="entry-org">Office of Research and Creative Activities</p>
             <ul class="entry-points">
               <li>Wrote the grant proposal, won a $1,500 ORCA hardware grant, and assembled a multidisciplinary team of seven mechanical, electrical, and computer engineering students.</li>
               <li>Built a functioning robotic finger for underwater use with advisor Mark Killpack.</li>
@@ -1349,7 +1346,7 @@ a:focus-visible,
           <h3 class="project-title">EVE</h3>
           <p class="project-meta">2018 &middot; Amazon Alexa Prize Challenge</p>
           <p class="project-blurb">
-            A social conversational agent built with the BYU PCC Lab
+            A social conversational agent built with the Perception, Control & Cognition Lab
             for the Alexa Prize Challenge. Our team won the $250K
             grant and a 1-in-9 spot to compete. I designed the NLG
             pipeline and led safety work on the dialogue corpus.
@@ -1373,7 +1370,7 @@ a:focus-visible,
 
         <li class="project">
           <h3 class="project-title">Underwater Robotic Hand</h3>
-          <p class="project-meta">2016 &middot; BYU ORCA Grant</p>
+          <p class="project-meta">2016 &middot; Office of Research and Creative Activities Grant</p>
           <p class="project-blurb">
             Wrote the grant, hired the team, and built a robotic finger
             for underwater use. The novel piece: a deep-learning method
@@ -1468,9 +1465,8 @@ a:focus-visible,
       </div>
 
       <ul class="links">
-        <li><a class="link" href="mailto:ben.murdoch.94@gmail.com">ben.murdoch.94@gmail.com</a></li>
-        <li><a class="link" href="https://github.com/murdo25" target="_blank" rel="noopener">github.com/murdo25</a></li>
         <li><a class="link" href="https://www.linkedin.com/in/ben-murdoch/" target="_blank" rel="noopener">linkedin.com/in/ben-murdoch</a></li>
+        <li><a class="link" href="https://github.com/murdo25" target="_blank" rel="noopener">github.com/murdo25</a></li>
       </ul>
     </section>
 
